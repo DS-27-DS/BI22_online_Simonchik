@@ -3,9 +3,9 @@ SELECT CONVERT(CHAR(255), @myid) AS 'char';
 
 SELECT * FROM Production.Document;
 
---4. Вывод ограничений
---Итого 3 ограничения: PK, FK и DEFAULT
---Я бы сама до такого не додумалась, есть ли способоб проще? Кроме написания кода, использования SSMS или способа "ну, видно же, по логике")
+--4. Р’С‹РІРѕРґ РѕРіСЂР°РЅРёС‡РµРЅРёР№
+--РС‚РѕРіРѕ 3 РѕРіСЂР°РЅРёС‡РµРЅРёСЏ: PK, FK Рё DEFAULT
+--РЇ Р±С‹ СЃР°РјР° РґРѕ С‚Р°РєРѕРіРѕ РЅРµ РґРѕРґСѓРјР°Р»Р°СЃСЊ, РµСЃС‚СЊ Р»Рё СЃРїРѕСЃРѕР±РѕР± РїСЂРѕС‰Рµ? РљСЂРѕРјРµ РЅР°РїРёСЃР°РЅРёСЏ РєРѕРґР°, РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ SSMS РёР»Рё СЃРїРѕСЃРѕР±Р° "РЅСѓ, РІРёРґРЅРѕ Р¶Рµ, РїРѕ Р»РѕРіРёРєРµ")
 SELECT 
     cons.name AS constraint_name,
     cols.name AS column_name,
@@ -43,8 +43,8 @@ SELECT * From Patients;
 --7.
 ALTER TABLE Patients
 ADD TempType AS (CASE
-WHEN Temp<0 THEN '< 0°C'
-ELSE '> 0°C'
+WHEN Temp<0 THEN '< 0В°C'
+ELSE '> 0В°C'
 END);
 
 SELECT * From Patients;
